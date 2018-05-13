@@ -1,0 +1,25 @@
+{
+  "name": "@foxzilla/fireblog-sdk",
+  "version": "0.0.1-alpha.3",
+  "description": "Some tools for FireBlog.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FoXZilla/fireblog-sdk.git"
+  },
+  "keywords": [
+    "FireBlog",
+    "FireBean"
+  ],
+  "author": "FoXZilla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FoXZilla/fireblog-sdk/issues"
+  },
+  "homepage": "https://github.com/FoXZilla/fireblog-sdk#readme",
+  "dependencies": {
+    "@foxzilla/fireblog": "0.0.1-alpha.26"
+  },
+  "devDependencies": {
+    "typescript": "^2.8.3"
+  }
+}
