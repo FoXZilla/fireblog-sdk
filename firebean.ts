@@ -47,6 +47,7 @@ export function stringify(inputData:any ,baseUrl =''):string{
 
 export function exec(input:FireBeanTypes.Data|string =location.href){
     var data:FireBeanTypes.Data =typeof input ==='string' ?parse(input) :input;
+    //@ts-ignore
     Actions[data._type](data);
     if(data._close ===FireBeanTypes.CloseType.justClose){
         window.close();

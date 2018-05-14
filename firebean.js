@@ -13,11 +13,10 @@ exports.Actions = {
     remove_storage(data) {
         localStorage.removeItem(data.key);
     },
-    go_article() { },
-    go_comment() { },
-    go_user() { },
+    go_article(data) { },
+    go_comment(data) { },
+    go_user(data) { },
 };
-exports.basePath = '/';
 function stringify(inputData, baseUrl = '') {
     return `${baseUrl}/_firebean?${Object.entries(Object.assign({}, exports.DefaultData, inputData))
         .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value.toString())}`)
@@ -26,6 +25,7 @@ function stringify(inputData, baseUrl = '') {
 exports.stringify = stringify;
 function exec(input = location.href) {
     var data = typeof input === 'string' ? parse(input) : input;
+    //@ts-ignore
     exports.Actions[data._type](data);
     if (data._close === "1" /* justClose */) {
         window.close();
